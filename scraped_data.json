@@ -107,5 +107,32 @@
     "Sunlight": "Full-Partial",
     "Growth Rate": "Moderate",
     "url": "https://www.fast-growing-trees.com/products/apollo-winterberry-holly"
+  },
+  {
+    "title": "Crimson Pygmy Barberry ShrubCrimson Pygmy Barberry Shrub",
+    "price": "$69.95",
+    "Mature Height": "2-3 ft.",
+    "Mature Width": "2-3 ft.",
+    "Sunlight": "Full-Partial",
+    "Growth Rate": "Moderate",
+    "url": "https://www.fast-growing-trees.com/products/crimson-pygmy-barberry"
+  },
+  {
+    "title": "Lynwood Gold Forsythia ShrubLynwood Gold Forsythia Shrub",
+    "price": "$29.95",
+    "Mature Height": "8-10 ft.",
+    "Mature Width": "8-10 ft.",
+    "Sunlight": "Full-Partial",
+    "Growth Rate": "Fast",
+    "url": "https://www.fast-growing-trees.com/products/forsythia"
+  },
+  {
+    "title": "Enduring Summer Crape MyrtleEnduring Summer Crape Myrtle",
+    "price": "$39.95",
+    "Mature Height": "4-5 ft.",
+    "Mature Width": "4-5 ft.",
+    "Sunlight": "Full-Partial",
+    "Growth Rate": "Moderate",
+    "url": "https://www.fast-growing-trees.com/products/enduring-summer-crape-myrtle"
   }
 ]

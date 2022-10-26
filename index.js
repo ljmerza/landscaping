@@ -61,7 +61,7 @@ async function scrapeData() {
 
   console.table(scrapedData);
 
-  fs.writeFile("scaped_data.json", JSON.stringify(scrapedData, null, 2), (err) => {
+  fs.writeFile("scraped_data.json", JSON.stringify(scrapedData, null, 2), (err) => {
     if (err) {
       console.error(err);
       return;
