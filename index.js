@@ -38,6 +38,7 @@ async function scrapeData() {
     const { data } = await axios.get(url);
     const $ = cheerio.load(data);
 
+    // remove child text before adding parent text
     const title = $('h1.product__title').children().remove().end().text();
     const price = $('.product__price').text();
 
@@ -47,14 +48,18 @@ async function scrapeData() {
     }
 
     $('.details__table > tbody > tr').each((i , row) => {
+
+      // erach row is split by a colon (easy way to split by column)
       const rowText= $(row).text().replace(/\s\s+/g, '');
       const [key, value] = rowText.split(':');
 
+      // dont add these columns
       if(!['Does Not Ship To', 'Your Growing Zone', 'Grows Well In Zones', 'Botanical Name'].includes(key)) {
         product[key] = value;
       }
     });
 
+    // put url last so we see it at end of table
     product.url = url;
     scrapedData.push(product);
   }
