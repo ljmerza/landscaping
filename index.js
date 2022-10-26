@@ -18,6 +18,8 @@ const sideFence = [
   'https://www.fast-growing-trees.com/products/crimson-pygmy-barberry',
   'https://www.fast-growing-trees.com/products/forsythia',
   'https://www.fast-growing-trees.com/products/enduring-summer-crape-myrtle',
+  'https://www.fast-growing-trees.com/products/hopi-crape-myrtle-tree',
+  'https://www.fast-growing-trees.com/products/tonto-crape-myrtle'
 ]
 
 const backFence = [

@@ -134,5 +134,23 @@
     "Sunlight": "Full-Partial",
     "Growth Rate": "Moderate",
     "url": "https://www.fast-growing-trees.com/products/enduring-summer-crape-myrtle"
+  },
+  {
+    "title": "Hopi Crape MyrtleHopi Crape Myrtle",
+    "price": "$79.95",
+    "Mature Height": "5-10 ft.",
+    "Mature Width": "4-10 ft.",
+    "Sunlight": "Full Sun",
+    "Growth Rate": "Moderate",
+    "url": "https://www.fast-growing-trees.com/products/hopi-crape-myrtle-tree"
+  },
+  {
+    "title": "Tonto Crape Myrtle TreeTonto Crape Myrtle Tree",
+    "price": "$34.95",
+    "Mature Height": "8-10 ft.",
+    "Mature Width": "6-10 ft.",
+    "Sunlight": "Full Sun",
+    "Growth Rate": "Fast",
+    "url": "https://www.fast-growing-trees.com/products/tonto-crape-myrtle"
   }
 ]
