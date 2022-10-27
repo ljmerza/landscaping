@@ -32,11 +32,15 @@ const trees = [
 
 ]
 
+const urls = sideFence;
+
 
 async function scrapeData() {
   const scrapedData = [];
 
-  for await(const url of sideFence) {
+  let count = 1;
+
+  for await(const url of urls) {
     const { data } = await axios.get(url);
     const $ = cheerio.load(data);
 
@@ -45,22 +49,32 @@ async function scrapeData() {
     const price = $('.product__price').text();
 
     const product = {
-      title,
-      price,
+      title: url.split(/products\//)[1].replace(/-/g, ' '),
+      price: parseInt(price.replace('$', ''), 10) + 1,
     }
 
-    $('.details__table > tbody > tr').each((i , row) => {
+    $('.details__table > tbody > tr').each((index , row) => {
 
       // erach row is split by a colon (easy way to split by column)
       const rowText= $(row).text().replace(/\s\s+/g, '');
       const [key, value] = rowText.split(':');
 
       // dont add these columns
-      if(!['Does Not Ship To', 'Your Growing Zone', 'Grows Well In Zones', 'Botanical Name'].includes(key)) {
+      if(!['Does Not Ship To', 'Your Growing Zone', 'Grows Well In Zones', 'Botanical Name', 'Spacing'].includes(key)) {
         product[key] = value;
       }
-    });
 
+      if(['Mature Width', 'Mature Height'].includes(key)){
+        product[key] = value.replace('inches', 'in').replace(/ /g, '')
+      }
+
+      if(key === 'Sunlight' && value === 'Full Sun to Part Shade'){
+        product[key] = 'Full-Partial'
+      }
+    });
+    
+    console.log(`${count++}/${urls.length}`)
+    
     // put url last so we see it at end of table
     product.url = url;
     scrapedData.push(product);
